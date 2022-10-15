@@ -2,12 +2,15 @@
 
 
 /* ---------- MAIN DIVS ---------*/
+* {
+    background-color: black;
+}
+
 .body {
     display: flex;
     padding: 0px;
     background-color: black;
-
-    height: 100%;
+    height: auto;
 }
 
 .sidebar {
@@ -49,6 +52,15 @@
 
 }
 
+/*---------------- MENU --------------------*/
+.menu {
+    display: inline-block;
+    position: fixed;
+    vertical-align: middle;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+}
+
 /* ---------------Tweet Box-----------------*/
 .username {
     font-family: Roboto;
@@ -73,7 +85,23 @@
 
 /* --------------Post-----------*/
 
-.profileimg {}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tabPost {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+}
+
+.profileimg {
+    width: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
 
 .post {
     margin-bottom: 4%;
@@ -101,4 +129,14 @@
     font-family: Roboto;
     font-weight: 900;
     color: #e7e9ea;
+}
+
+.postbutton:active {
+    transition: background-color 0.5s ease;
+    background-color: rgb(29, 155, 240);
+    transform: scale(.8);
+}
+
+.postbutton:hover {
+    background-color: #0e4e78;
 }

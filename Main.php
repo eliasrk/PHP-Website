@@ -57,14 +57,27 @@ require "controller/signup.php";
 -->
 <div class="body">
     <div class="sidebar">
-        <h1>1</h1>
+        <div class="menu">
+            <h1>Menu</h1>
+            <br>
+            <h1>Trending</h1>
+            <br>
+            <h1>Profile</h1>
+        </div>
     </div>
 
-    <div class="content"><div>
-        <img src="images/profilepic.png" alt="profile" class="profileimg"> </div>
+    <div class="content">
+        <div class="tabPost">
+        <div class="profileimg">
+        <img src="images/profilepic.png" alt="profile" >
+        </div>
+
         <input type="text" class="post"placeholder = "whats happening?">
+        
         <br>
+        
         <button class="postbutton">Post</button>
+        </div>
         <?php
         //$conn = new mysqli("localhost", "root", "", "Blog");
         //$sql = "INSERT INTO tweets (username, content) FROM Blog.tweets";
