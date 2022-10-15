@@ -2,9 +2,6 @@
 require "controller/signup.php";
 
 ?>
-
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +60,17 @@ require "controller/signup.php";
         <h1>1</h1>
     </div>
 
-    <div class="content">
+    <div class="content"><div>
+        <img src="images/profilepic.png" alt="profile" class="profileimg"> </div>
+        <input type="text" class="post"placeholder = "whats happening?">
+        <br>
+        <button class="postbutton">Post</button>
+        <?php
+        //$conn = new mysqli("localhost", "root", "", "Blog");
+        //$sql = "INSERT INTO tweets (username, content) FROM Blog.tweets";
+        //$result = $conn->query($sql);
+
+        ?>
 
         <?php
         $conn = new mysqli("localhost", "root", "", "Blog");
@@ -79,7 +86,8 @@ require "controller/signup.php";
 
     </div>
     <div class="search">
-        <h2>3</h2>
+        
+    
     </div>
 </div>
 
