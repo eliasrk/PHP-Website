@@ -39,6 +39,7 @@
     background-color: black;
     color: #e7e9ea;
     display: flex;
+    flex-wrap: wrap;
     flex-grow: 1;
     order: 3;
     margin-left: 1em;
@@ -68,4 +69,36 @@
     border-color: #2f3336;
     background-color: black;
     padding: 1%;
+}
+
+/* --------------Post-----------*/
+
+.profileimg {}
+
+.post {
+    margin-bottom: 4%;
+    margin-top: 4%;
+    width: 75%;
+    align-self: end;
+    border: none;
+    background-color: transparent;
+    font-family: Roboto;
+    font-weight: 700;
+    color: #e7e9ea;
+}
+
+.postbutton {
+    align-self: flex-end;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(29, 155, 240);
+    border: none;
+    border-radius: 15px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: Roboto;
+    font-weight: 900;
+    color: #e7e9ea;
 }
