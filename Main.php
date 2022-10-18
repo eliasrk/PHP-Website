@@ -1,8 +1,9 @@
 <?php
 require "controller/signup.php";
 require "model/database.php";
-//require "controller/tweets.php"
+require "controller/postTweets.php";
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,42 +68,28 @@ require "model/database.php";
         </div>
     </div>
 
-    <div class="content">
+    <form method="POST" class="content">
         <div class="tabPost">
-        <div class="profileimg">
-        <img src="images/profilepic.png" alt="profile" >
+            <div class="profileimg">
+                <img src="images/profilepic.png" alt="profile">
+            </div>
+
+            <input type="text" name="tweetfield" class="post" placeholder="whats happening?">
+
+            <br>
+
+            <button type="tweet" name="tweet" class="postbutton">Post</button>
         </div>
 
-        <input type="text" name="tweetfield" class="post"placeholder = "whats happening?">
-        
-        <br>
-        
-        <button type="tweet" name="tweet" class="button">Post</button>
-        </div>
         <?php
-        //$database;
-        //$sql = "INSERT INTO Blog.tweets (username,content) values (" . $_POST["username"] . ", " . $_POST["tweetfield"] . ")";
-        //$result = $conn->query($sql);
-        //$conn->close();
+        require "controller/getTweets.php";
         ?>
 
-        <?php
-        $database;
-        $sql = "SELECT username, tweetId, content, comment FROM Blog.tweets";
-        $result = $database->query($sql);
-        while ($row = $result->fetch_assoc()) {
-            echo " <div class = 'tweet'>"
-            . "<div class = 'username'> " . $row["username"] . "</div>"
-            .  " <div> " . $row["content"] . "</div>"
-            . "<br></div> ";
-        }
-        ?>
+</div>
+<div class="search">
 
-    </div>
-    <div class="search">
-        
-    
-    </div>
+
+</div>
 </div>
 
 </html>
