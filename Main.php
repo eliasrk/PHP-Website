@@ -14,7 +14,7 @@ require "controller/postTweets.php";
 </head>
 
 
-<!-- <div class="sidebar">
+<!--
 <form method="Post">
 
         <label for="email-field">Email address:</label>
