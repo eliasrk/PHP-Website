@@ -39,7 +39,7 @@ if ($result !== true && $result->num_rows != 0) {
 }
 
 //inserts your details into account
-$query = "INSERT into user(emaiL,password,name) VALUES('" . $_POST["email"] . "', '" . password_hash($_POST["password"], PASSWORD_DEFAULT) . "', '" . strip_tags($_POST["name"]) . "')";
+$query = "INSERT into user(email,password,name) VALUES('" . $_POST["email"] . "', '" . password_hash($_POST["password"], PASSWORD_DEFAULT) . "', '" . strip_tags($_POST["name"]) . "')";
 $result = $database->query($query);
 if (!$result) {
     $error = "An interal error occured. Please contact the webmaster!";

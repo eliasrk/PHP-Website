@@ -1,6 +1,7 @@
 <?php
 require "controller/signup.php";
-
+require "model/database.php";
+//require "controller/tweets.php"
 ?>
 <head>
     <meta charset="UTF-8">
@@ -72,28 +73,28 @@ require "controller/signup.php";
         <img src="images/profilepic.png" alt="profile" >
         </div>
 
-        <input type="text" class="post"placeholder = "whats happening?">
+        <input type="text" name="tweetfield" class="post"placeholder = "whats happening?">
         
         <br>
         
-        <button class="postbutton">Post</button>
+        <button type="tweet" name="tweet" class="button">Post</button>
         </div>
         <?php
-        //$conn = new mysqli("localhost", "root", "", "Blog");
-        //$sql = "INSERT INTO tweets (username, content) FROM Blog.tweets";
+        //$database;
+        //$sql = "INSERT INTO Blog.tweets (username,content) values (" . $_POST["username"] . ", " . $_POST["tweetfield"] . ")";
         //$result = $conn->query($sql);
-
+        //$conn->close();
         ?>
 
         <?php
-        $conn = new mysqli("localhost", "root", "", "Blog");
+        $database;
         $sql = "SELECT username, tweetId, content, comment FROM Blog.tweets";
-        $result = $conn->query($sql);
+        $result = $database->query($sql);
         while ($row = $result->fetch_assoc()) {
             echo " <div class = 'tweet'>"
-                . "<div class = 'username'> " . $row["username"] . "</div>"
-                .  " <div> " . $row["content"] . "</div>"
-                . "<br></div> ";
+            . "<div class = 'username'> " . $row["username"] . "</div>"
+            .  " <div> " . $row["content"] . "</div>"
+            . "<br></div> ";
         }
         ?>
 
