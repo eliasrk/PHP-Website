@@ -1,0 +1,69 @@
+/* --------------login Page ---------------*/
+* {
+    background-color: black;
+    color: white;
+}
+
+
+.center {
+    border: 100px;
+    border-radius: 15px;
+    border-color: white;
+    color: white;
+}
+
+label {
+
+    padding-bottom: 4%;
+    padding-top: 4%;
+    text-align: left !important;
+}
+
+input {
+    width: 10%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+    border: none;
+    background-color: transparent;
+    font-family: Roboto;
+    font-weight: 700;
+    color: #e7e9ea;
+
+}
+
+form {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    border: 100px;
+    border-radius: 15px;
+    border-color: rgb(29, 155, 240);
+    ;
+    color: white;
+}
+
+.loginbutton {
+    align-self: flex-end;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgb(29, 155, 240);
+    border: none;
+    border-radius: 15px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: Roboto;
+    font-weight: 900;
+    color: #e7e9ea;
+}
+
+.loginbutton:active {
+    transition: background-color 0.5s ease;
+    background-color: rgb(29, 155, 240);
+    transform: scale(.8);
+}
+
+.loginbutton:hover {
+    background-color: #0e4e78;
+}
