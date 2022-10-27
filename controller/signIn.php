@@ -1,5 +1,7 @@
 <?php
-if (!isset($_POST["submit"])) {
+session_start();
+session_regenerate_id(true);
+if (!isset($_POST["login"])) {
     return;
 }
 
@@ -27,18 +29,11 @@ if (!$result) {
     return;
 }
 
-
-
-
-
 if (!$result) {
     $error = "An interal error occured. Please contact the webmaster!";
     return;
 }
-echo $query;
 
-session_start();
-session_regenerate_id(true);
+
 $_SESSION["expiration"] = time() + 3600;
 echo " the session will expire at " . date("Y-m-d H:i:s", $_SESSION["expiration"]);
-header("location: Main.php");
