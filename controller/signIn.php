@@ -24,10 +24,8 @@ $query = "SELECT * FROM user WHERE email = '" . $_POST["email"] . "'";
 
 $result = $database->query($query);
 $password = $result->fetch_assoc()["password"];
-var_dump($result);
-var_dump($password);
 if (password_verify($_POST["password"], $password) == true) {
-    header("location Main.php");
+    header("location: Main.php");
 } else {
     $error = "Wrong Password";
 }
