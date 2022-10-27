@@ -39,6 +39,7 @@ require "model/database.php";
             <br>
 
             <button type="submit" name="submit" class="loginbutton">Register</button>
+
             <?php
             if (isset($error)) {
                 echo "<p>$error</p>";
