@@ -1,8 +1,6 @@
 <?php
 require "model/database.php";
 require "controller/signIn.php";
-
-
 ?>
 <html lang="en">
 

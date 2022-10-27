@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_SESSION["expiration"]) || $_SESSION["expiration"] < time()) {
-    header("Location: loginPage.php");
-    //kills all connections databanks and any data running in the background
+if (!isset($_SESSION['current'])) {
+    $_SESSION['current'] = time();
+} else if (time() - $_SESSION['current'] > 1800) {
     die("Please login!");
+    header("location: Login.php");
 }
-$_SESSION["expiration"] = time() + 3600;

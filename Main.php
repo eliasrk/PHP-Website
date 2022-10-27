@@ -1,6 +1,7 @@
 <?php
 require "model/database.php";
 require "controller/postTweets.php";
+require "controller/authentication.php";
 include "signup.php";
 session_start();
 
@@ -18,11 +19,11 @@ session_start();
 <div class="body">
     <div class="sidebar">
         <div class="menu">
-            <h1>Menu</h1>
+            <h1><a href="/Project/Main.php" style="text-decoration: none; color:white;">Home</a></h1>
             <br>
-            <h1>Trending</h1>
+            <h1><a href="/Project/privacy.php" style="text-decoration: none; color:white;">Privacy Policy</a></h1>
             <br>
-            <h1>Profile</h1>
+            <h1><a href="/Project/Login.php" style="text-decoration: none; color:white;">Logout</a></h1>
         </div>
     </div>
 
@@ -35,7 +36,8 @@ session_start();
             <input type="text" name="tweetfield" class="post" placeholder="whats happening?">
 
             <br>
-
+            
+            
             <button type="tweet" name="tweet" class="postbutton">Post</button>
         </div>
 
