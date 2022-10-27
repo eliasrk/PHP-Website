@@ -34,7 +34,7 @@ if ($result !== true && $result->num_rows != 0) {
     while ($row = $result->fetch_assoc()) {
         $name = $row["name"];
     }
-    $error = "An account with this email addres alread exist. Please the login page to login in! P.S the username is " . $name . "";
+    $error = "An account with this email address alread exist. Please the login page to login in! P.S the username is " . $name . "";
     return;
 }
 
