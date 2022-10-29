@@ -7,6 +7,7 @@ session_start();
 
 ?>
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +37,8 @@ session_start();
             <input type="text" name="tweetfield" class="post" placeholder="whats happening?">
 
             <br>
-            
-            
+
+
             <button type="tweet" name="tweet" class="postbutton">Post</button>
         </div>
 
